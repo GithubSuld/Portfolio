@@ -3,28 +3,76 @@ body {
     overflow-x: hidden;
 }
 
+
+
+.menu-container {
+    position: relative;
+}
+
+.menu {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.menu svg {
+    cursor: pointer;
+    fill: black;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 120px;
+    text-align: center;
+}
+
+.dropdown p {
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.menu:hover .dropdown {
+    display: block;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-main {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
 .lighting {
-    margin-left: 700px;
     margin-top: 50px;
 }
 
 .picture {
-    margin-left: 400px;
-    margin-top: 10px;
+    margin-right: 30px;
 }
 
 .profile-stats {
     font-family: 'Poppins';
     font-size: 20px;
-    position: absolute;
-    margin-left: 670px;
-    margin-top: 100px;
-
-
     color: #F1F2F4;
-
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    ;
 }
 
 h3 {
@@ -33,24 +81,14 @@ h3 {
     color: #A3ABB2;
 }
 
-.manage-top {
-    margin-top: -30px;
-}
-
-.profile-facts {
-    flex-direction: column;
-    display: flex;
-
-}
-
 .headings {
     display: flex;
-    color: #A3ABB2;
-    font-family: 'Poppins';
+    justify-content: center;
     gap: 100px;
-    margin-left: 440px;
+    font-family: 'Poppins';
     font-size: 19px;
-    margin-top: 50px;
+    color: #A3ABB2;
+    margin: 50px 0;
 }
 
 .button-container {
@@ -77,6 +115,7 @@ h3 {
     padding: 23px 80px;
     color: #A3ABB2;
     border-radius: 5px;
+    border: none;
 }
 
 .background {
@@ -87,8 +126,10 @@ h3 {
     border-radius: 10px;
     display: flex;
     justify-content: space-around;
+}
 
-
+.Portfolio-button, .Skills-button {
+    cursor: pointer;
 }
 
 .Portfolio-button {
@@ -96,36 +137,54 @@ h3 {
     margin-top: 10px;
     height: 60px;
     width: 200px;
-    margin-left: 0px;
-    border-color: none;
+    border: none; 
     border-radius: 10px;
     color: aliceblue;
 }
-
 
 .Skills-button {
     background-color: #171F26;
     height: 60px;
     width: 200px;
-    border-color: none;
+    border: none; 
     border-radius: 10px;
     color: aliceblue;
 }
 
 .Websites {
     margin-top: 40px;
-    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Calc {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .Links {
     display: flex;
 }
 
+.light-mode .name {
+    color: black;
+}
+
+.light-mode .title, .light-mode h3, .light-mode .profile-stats {
+    color: #333333;
+}
+
+.light-mode .headings p {
+    color: #333333;
+}
+
 @media screen and (min-width: 500px) {
     .profile-content {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        align-items: center;
         width: 100%;
     }
 }
